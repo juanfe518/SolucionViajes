@@ -1,7 +1,11 @@
-﻿namespace SolucionNewShore.Modelos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SolucionNewShore.Modelos
 {
     public class Vuelo
     {
+        [Key]
+        public int id { get; set; }
         public string origen { get; set; } = string.Empty;
         public string destino { get; set; } = string.Empty;
         public double precio { get; set; }

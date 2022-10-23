@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SolucionNewShore.Contexto;
 using SolucionNewShore.Modelos;
 using SolucionNewShore.Servicios;
 
@@ -10,13 +12,15 @@ namespace SolucionNewShore.Controllers
     public class VuelosController : ControllerBase
     {
         private readonly NewshoreService _newshoreService;
-        public VuelosController(NewshoreService newshoreService)
+        private readonly DbContexto _contexto;
+        public VuelosController(NewshoreService newshoreService, DbContexto contexto)
         {
             _newshoreService = newshoreService;
+            _contexto = contexto;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Vuelos>>> getViajes()
+        public async Task<ActionResult<List<Vuelos>>> obtenerListaVuelos()
         {
             string prueba = "CTG";
             List<Vuelos> ciudadOrigen = _newshoreService.obtenerVuelos().Result;
@@ -26,11 +30,9 @@ namespace SolucionNewShore.Controllers
         }
 
         [HttpGet("viaje")]
-        public async Task<ActionResult<List<Viaje>>> getRutas(string origen, string destino)
+        public async Task<ActionResult<List<Viaje>>> obtenerViaje(string origen, string destino)
         {
             var ciudadOrigen2 =  _newshoreService.viajes(origen, destino).Result;
-            
-
             return Ok(ciudadOrigen2);
         }
     }
