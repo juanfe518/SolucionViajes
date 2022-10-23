@@ -2,17 +2,17 @@
 {
     public class Viaje
     {
-        public string Origen { get; set; } = string.Empty;
-        public string Destino { get; set; } = string.Empty;
+        public string origen { get; set; } = string.Empty;
+        public string destino { get; set; } = string.Empty;
         public double precio { get; set; }
-        public List<Vuelo> Vuelos { get; set; }
+        public List<Vuelo> vuelos { get; set; }
 
-        public Viaje(string Origen, string Destino, double precio, List<Vuelo> vuelos)
+        public Viaje(string origen, string destino, double precio, List<Vuelo> vuelos)
         {
-            this.Origen = Origen;
-            this.Destino = Destino;
+            this.origen = origen;
+            this.destino = destino;
             this.precio = precio;
-            this.Vuelos = vuelos;
+            this.vuelos = vuelos;
         }
 
         public Viaje()

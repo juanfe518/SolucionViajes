@@ -2,13 +2,13 @@
 {
     public class Transporte
     {
-        public string CompaniaAerea { get; set; } = string.Empty;
-        public string NumeroDeVuelo { get; set; } = string.Empty;
+        public string companiaAerea { get; set; } = string.Empty;
+        public string numeroDeVuelo { get; set; } = string.Empty;
 
         public Transporte(string companiaAerea, string numeroDeVuelo)
         {
-            this.CompaniaAerea = companiaAerea;
-            this.NumeroDeVuelo = numeroDeVuelo;    
+            this.companiaAerea = companiaAerea;
+            this.numeroDeVuelo = numeroDeVuelo;    
         }
 
         public Transporte()
