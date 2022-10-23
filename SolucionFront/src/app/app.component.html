@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-4">
+    <input class="form-control" #origen placeholder="Partida"/>
+    <input class="form-control" #destino placeholder="Destino"/>
+  </div>
+  <button class="btn btn-primary" (click)="obtenerRuta(origen.value, destino.value)" >Consultar</button>
+
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Precio</th>
+          <th>Vuelos</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr *ngIf="viajes">
+          <td scope="row">{{ viajes.id }}</td>
+          <td>{{ viajes.origen }}</td>
+          <td>{{ viajes.destino }}</td>
+          <td>{{ viajes.precio }}</td>
+          <td>{{ viajes.vuelos }}</td>
+        </tr>
+      </tbody>
+    </table>  
+  </div>
+  
+</div>
