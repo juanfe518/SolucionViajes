@@ -11,6 +11,9 @@ namespace SolucionNewShore.Controllers
     [ApiController]
     public class VuelosController : ControllerBase
     {
+        //esta es la capa de controlador
+
+        //llamo la instancia de el servicio y el db context
         private readonly NewshoreService _newshoreService;
         private readonly DbContexto _contexto;
         public VuelosController(NewshoreService newshoreService, DbContexto contexto)
@@ -19,6 +22,7 @@ namespace SolucionNewShore.Controllers
             _contexto = contexto;
         }
 
+        //con este metodo compreubo que el servicio está funcionando correctamente
         [HttpGet]
         public async Task<ActionResult<List<Vuelos>>> obtenerListaVuelos()
         {
@@ -29,6 +33,7 @@ namespace SolucionNewShore.Controllers
             return Ok(ciudadOrigen2);
         }
 
+        // este metodo devuelve el viaje especificado
         [HttpGet("viaje")]
         public async Task<ActionResult<List<Viaje>>> obtenerViaje(string origen, string destino)
         {

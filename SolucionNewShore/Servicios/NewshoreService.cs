@@ -8,6 +8,8 @@ namespace SolucionNewShore.Servicios
 {
     public class NewshoreService
     {
+        //esta es la capa de servicios, en esta clase es deonde llamo el servicio externo a consumir
+
         public async Task<List<Vuelos>> obtenerVuelos()
         {
             var httpClient = new HttpClient();
@@ -18,7 +20,7 @@ namespace SolucionNewShore.Servicios
             return (listaVuelos);
         }
 
-
+        //este metodo devuelve una lista de viajes segun el origen y el destino
         public async Task<List<Viaje>> viajes(string origen, string destino)
         {
             var httpClient = new HttpClient();

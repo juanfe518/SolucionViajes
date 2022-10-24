@@ -16,6 +16,7 @@ export class AppComponent {
   
   constructor(private newSshoreService: NewshoreService) {}
   
+  // Creo el meodo para obtener los datos
   obtenerRuta(origen: string, destino: string): void{
     this.newSshoreService.getViajes(origen, destino)
       .subscribe((viaje: any) => {
