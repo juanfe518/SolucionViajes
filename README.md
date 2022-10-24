@@ -2,12 +2,16 @@
 A continuacion explicaré los pasos para ejecutar la aplicacion
 
 # Como configurar el backend
+TENER EN CUENTA => el proyecto se realizó con .Net6
+
 El proyecto para el backend cuenta con las librerias newtonsoft, microsoft entity framework core, microsoft entity framework design y microsoft entity framework core sqlServer. asegurarse de que estas librerias se encuentran descargadas para poder ejecutar el pryecto.
 para descargar las librerías, damos click derecho en dependencias y seleccionamos administrador de paqutes NuGet, en examinar buscamos los paquetes antes mensionados y los descargamos
 
 ![image](https://user-images.githubusercontent.com/84154739/197449053-32dc1ea5-5fe0-4c38-882c-f389ff3653ef.png)
 
 # Como configurar el frontend
+TENER EN CUENTA => el pryecto se realizó con las versiones de Angular CLI: 14.2.6 y Node: 16.15.0
+
 Para el Frontend se descargó la librería de bootstrap, asegurarse de que se encuentra instalada, ya el resto se encuentra configurado
 Para descargar Bootstrap, en la consola en la ubicacion de proyecto en SolucionFront ejecutamos el comando npm install bootstrap --save
 ![image](https://user-images.githubusercontent.com/84154739/197449465-7126987c-6b1e-40c5-aaae-c6d374666561.png)
